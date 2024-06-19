@@ -4,6 +4,7 @@ body {
 
 :root {
   --main-color: rgba(77, 49, 71, 1);
+  --second-color: rgba(134, 106, 128, 1);
 }
 
 .login-page {
@@ -11,8 +12,20 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('/src/components/imgBack.jpeg');
+  background-image: url('/images/background-img.jpeg');
   background-size: cover;
+}
+
+.login-container {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  width: 480px;
+  height: 340px;
+  gap: 0px;
+  border-radius: 12px;
+  opacity: 0px;
+  box-shadow: 0px 24px 64px 0px rgba(38, 33, 74, 0.1);
 }
 
 #bem-vindo-text {
@@ -23,11 +36,10 @@ body {
 }
 
 #login-text {
-  font-size: 13.67px;
+  font-size: 14px;
   font-weight: 900;
   line-height: 14px;
   text-align: center;
-  
 }
 
 #login-button {
@@ -41,6 +53,10 @@ body {
   background-color: var(--main-color);
   cursor: pointer;
   color: white;
+}
+
+#login-button:hover {
+  background-color: var(--second-color);
 }
 
 #email-text, #password-text {
@@ -63,18 +79,6 @@ body {
   margin-right: 10px;
 }
 
-.login-container {
-  background: rgba(255, 255, 255, 1);
-  padding: 20px;
-  text-align: center;
-  width: 480px;
-  height: 350px;
-  gap: 0px;
-  border-radius: 12px;
-  opacity: 0px;
-  box-shadow: 0px 24px 64px 0px rgba(38, 33, 74, 0.1);
-}
-
 .form-group {
   margin-bottom: 15px;
 }
@@ -84,19 +88,76 @@ label {
   margin-bottom: 5px;
 }
 
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon .icon {
+  position: absolute;
+  left: 60px;
+  color: #999;
+}
+
 #email-input, #password-input {
-  width: 350px;
-  padding: 8px;
-  margin-bottom: 10px;
+  width: 330px;
+  margin-left: 55px;
+  padding: 8px 8px 8px 30px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
 input::placeholder {
-  color: #999; /* Cor cinza para o placeholder */
+  color: #999;
 }
 
+
+
+.sidebar {
+  width: 80px;
+  height: 1086px;
+  padding: 0px 0px 771px 0px;
+  gap: 0px;
+  opacity: 0px;
+  box-shadow: 7px 4px 18.4px 0px rgba(0, 107, 215, 0.15);
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.sidebar-logo {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+}
+
+.icon-background {
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.icon-background svg {
+  z-index: 1;
+}

@@ -1,7 +1,10 @@
 import React from 'react'
+import Navbar from '../components/Sidebar'
 
 export default function Clients() {
     return (
-        <div>Clients</div>
+        <div>
+            <Navbar></Navbar>
+        </div>
     )
 }
