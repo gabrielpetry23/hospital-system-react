@@ -1,0 +1,102 @@
+body {
+  font-family: Segoe UI;
+}
+
+:root {
+  --main-color: rgba(77, 49, 71, 1);
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('/src/components/imgBack.jpeg');
+  background-size: cover;
+}
+
+#bem-vindo-text {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: center;
+}
+
+#login-text {
+  font-size: 13.67px;
+  font-weight: 900;
+  line-height: 14px;
+  text-align: center;
+  
+}
+
+#login-button {
+  width: 360px;
+  height: 50px;
+  top: 266px;
+  left: 60px;
+  gap: 0px;
+  border-radius: 9px;
+  opacity: 0px;
+  background-color: var(--main-color);
+  cursor: pointer;
+  color: white;
+}
+
+#email-text, #password-text {
+  height: 12px;
+  font-size: 12px;
+  line-height: 11px;
+  text-align: left;
+  width: 85px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+#password-text {
+  height: 12px;
+  font-size: 12px;
+  line-height: 11px;
+  text-align: left;
+  width: 105px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 1);
+  padding: 20px;
+  text-align: center;
+  width: 480px;
+  height: 350px;
+  gap: 0px;
+  border-radius: 12px;
+  opacity: 0px;
+  box-shadow: 0px 24px 64px 0px rgba(38, 33, 74, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#email-input, #password-input {
+  width: 350px;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+input::placeholder {
+  color: #999; /* Cor cinza para o placeholder */
+}
+
