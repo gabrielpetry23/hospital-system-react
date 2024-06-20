@@ -1,7 +1,7 @@
 // Sidebar.tsx
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiUsers } from 'react-icons/fi'; // Importe os ícones desejados
+import { FiUsers } from 'react-icons/fi';
 
 const Sidebar: React.FC = () => {
   const location = useLocation();
@@ -15,7 +15,7 @@ const Sidebar: React.FC = () => {
       </div>
       <div className="sidebar-item">
         <Link to="/clients" className={location.pathname === '/clients' ? 'active' : ''}>
-        <div className='icon-background'>
+        <div className='icon-background-sidebar'>
           <FiUsers size={24} color={'white'} />
         </div>
         </Link>
