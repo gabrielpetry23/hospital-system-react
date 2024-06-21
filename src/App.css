@@ -174,49 +174,50 @@ label {
 
 .client-card {
   background: rgba(255, 255, 255, 1);
-  padding: 20px;
+  padding: 1px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 250px;
-  height: 300px;
+  width: 210px;
+  height: 270px;
   text-align: center;
+  cursor: pointer;
 }
 
 .client-header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .client-initials {
   background: var(--main-color);
   color: white;
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
+  font-size: 17px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   margin-bottom: 10px;
+  margin-top: 12px;
 }
 
 .client-recurrence-box {
-  width: 200px;
-  height: 60px;
+  width: 140px;
+  height: 45px;
   border-radius: 6px;
   background-color: white;
   box-shadow: 0px 4px 4px 0px rgba(53, 53, 53, 0.12);
   color: #999;
   margin-bottom: 30px;
-  margin-top: 18px;
+  margin-top: 12px;
 }
 
 .client-actions {
   display: flex;
   justify-content: space-evenly;
-  cursor: pointer;
 }
 
 .divider {
@@ -231,8 +232,9 @@ label {
   border: none;
   background-color: white;
   color: rgba(59, 63, 92, 1);
-  font-size: 12px;
+  font-size: 10px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .copy-email-button .icon-email-copy, .whatsapp-button .icon-whatsapp {
@@ -240,13 +242,13 @@ label {
 }
 
 .icon-email-copy, .icon-whatsapp {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   color: black;
 }
 
 .client-name {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -262,6 +264,7 @@ label {
 
 #first-trip-date, #recurrence-value {
   color: var(--second-color);
+  font-size: 12px;
 }
 
 #input-search {
@@ -295,3 +298,168 @@ label {
 .search-container {
   display: flex;
 }
+
+.Toastify__toast--success {
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+body {
+  font-family: Segoe UI;
+}
+
+:root {
+  --main-color: rgba(77, 49, 71, 1);
+  --second-color: rgba(134, 106, 128, 1);
+}
+
+.main-container {
+  display: flex;
+}
+
+.rectangle {
+  flex-grow: 1;
+  margin: 32px 0 0 104px;
+  border-radius: 8px;
+  padding: 20px;
+  overflow: auto;
+  box-shadow: 7px 4px 18.4px 0px rgba(0, 107, 215, 0.15);
+  background-color: rgba(250, 250, 250, 1);
+}
+
+
+
+.client-info-container {
+  padding: 20px;
+}
+
+.client-header-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.client-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: white;
+}
+
+.client-name-id {
+  display: flex;
+  align-items: center;
+  margin-right: 750px;
+  font-size: 14px;
+}
+
+.client-name-id h1 {
+  display: flex;
+  align-items: center;
+}
+
+.divider-2 {
+  margin: 0 10px;
+  color: black;
+  font-weight: bold;
+}
+
+.add-trip-button {
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.client-content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.client-infos, .client-locations {
+  width: 65%;
+}
+
+.client-infos-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group-2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-2 label {
+  font-weight: bold;
+}
+
+.form-group-2 input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.client-locations-container {
+  margin-top: 20px;
+}
+
+.client-locations {
+  width: 350px;
+  height: 300px;
+  border-radius: 8px;
+  box-shadow: 7px 4px 18.4px 0px rgba(0, 107, 215, 0.15);
+  background-color: rgba(250, 250, 250, 1);
+}
+
+
+.client-locations li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-right: 15px;
+}
+
+.client-history {
+  margin-top: 20px;
+}
+
+.history-entry {
+  width: 100%;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header-divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  width: 100%;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+
+
+
