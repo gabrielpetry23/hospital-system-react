@@ -21,10 +21,11 @@ export default function Clients() {
         <div>
             <Sidebar />
             <div className='rectangle'>
-                <h1 style={{ fontSize: '20px'}}>Gabriel Petry</h1>
-                <span style={{ fontSize: '18px', fontWeight: "500"}}>Cliente</span>
+            <h1 style={{ fontSize: '23px'}}>Gabriel Petry</h1>
+                <div className='search-container'>
+                <label style={{ fontSize: '18px', fontWeight: "500", marginRight: '10px'}}>Cliente</label>
                 <div className='input-with-icon-search'>
-                <FiSearch className='icon'></FiSearch>
+                <FiSearch className='icon-search'></FiSearch>
                 <input
                     id='input-search'
                     type="text" 
@@ -33,6 +34,8 @@ export default function Clients() {
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
                 </div>
+                </div>
+                
                 <div className="clients-container">
                     {filteredClients.map(client => (
                         <ClientCard key={client.id} client={client} />

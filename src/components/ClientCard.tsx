@@ -19,16 +19,23 @@ const ClientCard: React.FC<ClientCardProps> = ({ client }) => {
                 </div>
             </div>
             <div className="client-details">
-                <p>Primeira Viagem: {client.firstTrip}</p>
+                <p style={{fontSize: '15px', color: 'rgba(143, 142, 166, 1)'}}>Primeira Viagem:</p>
+                <p id='first-trip-date'>{client.firstTrip}</p>
                 <div className='client-recurrence-box'>
-                <p>Recorrência: {client.recurrence}</p>
+                <p style={{color: 'rgba(143, 142, 166, 1)'}}>Recorrência:</p>
+                <p id='recurrence-value'>{client.recurrence}</p>
                 </div>
             </div>
-            <div>
-                <FiMail></FiMail>
-                <button>Copiar email</button>
-                <FaWhatsapp></FaWhatsapp>
-                <button>WhatsApp</button>
+            <div className='client-actions'>
+                <button className='copy-email-button'>
+                    <FiMail className='icon-email-copy'></FiMail>
+                    <span>Copiar Email</span>
+                </button>
+                <div className='divider'></div>
+                <button className='whatsapp-button'>
+                    <FaWhatsapp className='icon-whatsapp'></FaWhatsapp>
+                    <span>WhatsApp</span>
+                </button>
             </div>
         </div>
     );
