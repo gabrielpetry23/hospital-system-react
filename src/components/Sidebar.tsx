@@ -14,9 +14,9 @@ const Sidebar: React.FC = () => {
         </Link>
       </div>
       <div className="sidebar-item">
-        <Link to="/clients" className={location.pathname === '/clients' ? 'active' : ''}>
-        <div className='icon-background-sidebar'>
-          <FiUsers size={24} color={'white'} />
+      <Link to="/clients" className={location.pathname === '/clients' ? 'active' : ''}>
+          <div className={`icon-background-sidebar ${location.pathname === '/clients' ? '' : 'active-icon'}`}>
+            <FiUsers size={24} />
         </div>
         </Link>
       </div>

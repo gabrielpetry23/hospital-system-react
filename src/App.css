@@ -142,6 +142,9 @@ label {
   width: 50px;
   height: 50px;
   background-color: var(--main-color);
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.006);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(242, 242, 247, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,8 +154,20 @@ label {
 }
 
 .icon-background-sidebar svg {
+  color: white;
   z-index: 1;
 }
+
+.icon-background-sidebar.active-icon {
+  background-color: white;
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.006);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(242, 242, 247, 1);
+}
+
+.icon-background-sidebar.active-icon svg {
+  color: var(--main-color);
+} 
 
 .rectangle {
   width: 1350px;
@@ -362,13 +377,16 @@ body {
 .client-name-id {
   display: flex;
   align-items: center;
-  margin-right: 750px;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: 20px;
   font-size: 14px;
 }
 
 .client-name-id h1 {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .divider-2 {
@@ -434,7 +452,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  margin-right: 15px;
+  margin-right: 50px;
 }
 
 .client-history {
@@ -445,21 +463,24 @@ body {
   width: 100%;
 }
 
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
 .history-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px;
 }
 
-.header-divider {
-  border: none;
-  border-top: 1px solid #ccc;
-  width: 100%;
-  margin-top: -10px;
-  margin-left: 10px;
+.history-feedback {
+  flex: 1;
 }
 
-
-
-
+#client-data-text {
+  color: #999;
+}

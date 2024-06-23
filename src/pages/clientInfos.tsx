@@ -38,35 +38,35 @@ const ClientDetails: React.FC = () => {
                             <div className="client-infos-form">
                                 <div className="form-group-2">
                                     <label>Data de Nascimento</label>
-                                    <input type="text" value={client.birthDate} readOnly />
+                                    <input id='client-data-text' type="text" value={client.birthDate} readOnly />
                                 </div>
                                 <div className="form-group-2">
                                     <label>Telefone</label>
-                                    <input type="text" value={client.phone} readOnly />
+                                    <input id='client-data-text' type="text" value={client.phone} readOnly />
                                 </div>
                                 <div className="form-group-2">
                                     <label>Endereço de email</label>
-                                    <input type="text" value={client.email} readOnly />
+                                    <input id='client-data-text' type="text" value={client.email} readOnly />
                                 </div>
                                 <div className="form-group-2">
                                     <label>CPF</label>
-                                    <input type="text" value={client.cpf} readOnly />
+                                    <input id='client-data-text' type="text" value={client.cpf} readOnly />
                                 </div>
                                 <div className="form-group-2">
                                     <label>Ocupação</label>
-                                    <input type="text" value={client.job} readOnly />
+                                    <input id='client-data-text' type="text" value={client.job} readOnly />
                                 </div>
                                 <div className="form-group-2">
                                     <label>Origem</label>
-                                    <input type="text" value={client.origin} readOnly />
+                                    <input id='client-data-text' type="text" value={client.origin} readOnly />
                                 </div>
                                 <div className="form-group-2">
                                     <label>Primeira Consulta</label>
-                                    <input type="text" value={client.firstTrip} readOnly />
+                                    <input id='client-data-text' type="text" value={client.firstTrip} readOnly />
                                 </div>
                                 <div className="form-group-2">
                                     <label>Recorrência</label>
-                                    <input type="text" value={client.recurrence} readOnly />
+                                    <input id='client-data-text' type="text" value={client.recurrence} readOnly />
                                 </div>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ const ClientDetails: React.FC = () => {
                                 <ul>
                                     {client.visits.map((visit: any, index: number) => (
                                         <li key={index}>
-                                            {index + 1}. {visit.city} <span>{visit.date}</span>
+                                            {index + 1}. {visit.city} <span style={{color: '#999'}}>{visit.date}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -87,11 +87,20 @@ const ClientDetails: React.FC = () => {
 
                     <div className="client-history">
                         <h2>Histórico</h2>
+                        <div className="history-header">
+                            <strong>Feedback</strong>
+                            <strong>Data da Viagem</strong>
+                        </div>
+                        <hr className="header-divider" />
                         <div className="history-entry">
                             {client.history.map((entry: any, index: number) => (
                                 <div key={index} className="history-item">
-                                    <div>{entry.feedback}</div>
-                                    <div style={{color: '#999'}}>{entry.date}</div>
+                                    <div className='history-feedback'>
+                                        {entry.feedback}
+                                    </div>
+                                    <div className='history-date'
+                                        style={{color: '#999'}}>{entry.date}
+                                    </div>
                                 </div>
                             ))}
                         </div>
