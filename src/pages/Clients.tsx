@@ -13,8 +13,12 @@ export default function Clients() {
         setClients(clientsData);
     }, []);
 
+    const removeAccents = (s: string) => {
+        return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+
     const filteredClients = clients.filter(client =>
-        client.name.toLowerCase().includes(searchTerm.toLowerCase())
+        removeAccents(client.name.toLowerCase()).includes(removeAccents(searchTerm.toLowerCase()))
     );
 
     return (

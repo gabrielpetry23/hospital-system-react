@@ -134,5 +134,93 @@
                 "city": "Beto Carrero"
             }
         ]
+    },
+    {
+        "id": "000005",
+        "cpf": "49281231050",
+        "name": "Mariana Silveira",
+        "email": "mari.silveira@example.com",
+        "birthDate": "15/08/1989",
+        "phone": "51990909888",
+        "recurrence": "Trimestral",
+        "job": "Fotógrafa",
+        "origin": "Recomendação",
+        "firstTrip": "10/06/2024",
+        "history": [
+            {
+                "feedback": "Atendimento excepcional!",
+                "date": "10/06/2024"
+            }
+        ],
+        "visits": [
+            {
+                "date": "10/06/2024",
+                "city": "Gramado"
+            }
+        ]
+    },
+    {
+        "id": "000006",
+        "cpf": "49245561053",
+        "name": "André Nunes",
+        "email": "andre.nunes@techmail.com",
+        "birthDate": "22/03/1985",
+        "phone": "51981234888",
+        "recurrence": "Anual",
+        "job": "Desenvolvedor de Software",
+        "origin": "Feira de Tecnologia",
+        "firstTrip": "05/07/2023",
+        "history": [
+            {
+                "feedback": "Hotel confortável, mas wifi lento.",
+                "date": "05/07/2023"
+            },
+            {
+                "feedback": "Paisagens maravilhosas!",
+                "date": "03/05/2024"
+            }
+        ],
+        "visits": [
+            {
+                "date": "05/07/2023",
+                "city": "Canela"
+            },
+            {
+                "date": "03/05/2024",
+                "city": "Porto Alegre"
+            }
+        ]
+    },
+    {
+        "id": "000007",
+        "cpf": "30311567890",
+        "name": "Teresa Campos",
+        "email": "teresa.campos@campomail.com",
+        "birthDate": "07/01/1996",
+        "phone": "51992045899",
+        "recurrence": "Semanal",
+        "job": "Bióloga",
+        "origin": "Congresso de Biologia",
+        "firstTrip": "20/05/2024",
+        "history": [
+            {
+                "feedback": "Excelente guia turístico.",
+                "date": "20/05/2024"
+            },
+            {
+                "feedback": "Acomodações precisam de melhorias.",
+                "date": "27/05/2024"
+            }
+        ],
+        "visits": [
+            {
+                "date": "20/05/2024",
+                "city": "Beto Carrero"
+            },
+            {
+                "date": "27/05/2024",
+                "city": "Disney"
+            }
+        ]
     }
 ]

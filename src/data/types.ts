@@ -18,3 +18,13 @@ export interface Client {
         city: string;
     }[];
 }
+
+export interface Visit {
+    city: string;
+    date: string;
+  }
+  
+  export interface HistoryEntry {
+    feedback: string;
+    date: string;
+  }

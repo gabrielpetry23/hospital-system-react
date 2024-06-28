@@ -19,9 +19,9 @@ const ClientCard: React.FC<ClientCardProps> = ({ client }) => {
     function copyEmail (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
         e.stopPropagation();
         navigator.clipboard.writeText(client.email).then(() => {
-            toast.success('Email copied successfully!');
+            toast.success('Email copiado com sucesso!');
         }, () => {
-            toast.error('Failed to copy email!');
+            toast.error('Falha ao copiar email!');
         });
     }
 

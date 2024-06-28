@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import clientsData from '../data/clients.json';
-import { Client } from '../data/types.ts';
+import { HistoryEntry, Visit } from '../data/types.ts';
 import Sidebar from '../components/Sidebar.tsx';
 
 const ClientDetails: React.FC = () => {
@@ -75,8 +75,8 @@ const ClientDetails: React.FC = () => {
                             <h2>Locais Visitados</h2>
                             <div className="client-locations">
                                 <ul>
-                                    {client.visits.map((visit: any, index: number) => (
-                                        <li key={index}>
+                                    {client.visits.map((visit: Visit, index: number) => (
+                                        <li key={index} className='location-item'>
                                             {index + 1}. {visit.city} <span style={{color: '#999'}}>{visit.date}</span>
                                         </li>
                                     ))}
@@ -92,14 +92,14 @@ const ClientDetails: React.FC = () => {
                             <strong>Data da Viagem</strong>
                         </div>
                         <hr className="header-divider" />
-                        <div className="history-entry">
-                            {client.history.map((entry: any, index: number) => (
+                        <div className="history-history">
+                            {client.history.map((history: HistoryEntry, index: number) => (
                                 <div key={index} className="history-item">
-                                    <div className='history-feedback'>
-                                        {entry.feedback}
+                                    <div>
+                                        {history.feedback}
                                     </div>
                                     <div className='history-date'
-                                        style={{color: '#999'}}>{entry.date}
+                                        style={{color: '#999'}}>{history.date}
                                     </div>
                                 </div>
                             ))}
