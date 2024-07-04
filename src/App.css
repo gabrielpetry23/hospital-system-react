@@ -2,6 +2,9 @@
 body {
   font-family: Segoe UI;
   overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
@@ -16,6 +19,7 @@ body {
   align-items: center;
   height: 100vh;
   background-image: url('/images/background-img.jpeg');
+  background-position: center;
   background-size: cover;
 }
 
@@ -191,6 +195,10 @@ label {
 }
 
 .client-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   background: rgba(255, 255, 255, 1);
   padding: 1px;
   border-radius: 8px;
@@ -199,7 +207,16 @@ label {
   height: 270px;
   text-align: center;
   cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.client-card:hover {
+  transform: scale(1.05);
+  background-color: #f0f0f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 .client-header {
   display: flex;
@@ -234,6 +251,7 @@ label {
 }
 
 .client-actions {
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -245,6 +263,7 @@ label {
 }
 
 .copy-email-button, .whatsapp-button  {
+  border-radius: 6px;
   display: flex;
   align-items: center;
   border: none;
